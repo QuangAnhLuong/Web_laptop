@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--separate header__navbar-item--has-qr">
+                            Vào cửa hàng trên ứng dụng Laptop
+                            <div class="hearder__qr">
+                                <img src="./assets/img/QRcode.png" alt="QR code" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/googleplay.png" alt="Google Play" class="header__qr-link">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/appstore.png" alt="App Store" class="header__qr-link">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <span class="header__navbar-title--no-pointer">Hotline hỗ trợ khách hàng: 1900 1234</span>
+                            <a href="" class="header__navbar--icon-link">
+                                <i class="header__navbar-icon fa-solid fa-phone-volume fa-sm" style="color: #ffffff;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-notify">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="header__navbar-icon fa-solid fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Xem tất cả thông báo</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item header__notify-item--viewed">
+                                        <a href="" class ="header__notify-link">
+                                            <img src="./assets/img/9tc93j68.png" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Laptop cũ Dell Inspiron 16 5625</span>
+                                                <span class="header__notify-description">Mô tả laptop</span>
+                                            </div>
+                                         </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class ="header__notify-link">
+                                            <img src="./assets/img/9tc93j68.png" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Laptop cũ Dell Inspiron 16 5625</span>
+                                                <span class="header__notify-descriotion">Mô tả laptop</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="header__notify-item">
+                                        <a href="" class ="header__notify-link">
+                                            <img src="./assets/img/9tc93j68.png" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Laptop cũ Dell Inspiron 16 5625</span>
+                                                <span class="header__notify-description">Mô tả laptop</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="fa-regular fa-circle-question"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--bold header__navbar-item--separate">Đăng kí</li>
+                        <li class="header__navbar-item header__navbar-item--bold">Đăng nhập</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+
+        </div>
+        <footer class="footer">
+
+        </footer>
+    </div>
+    <script>
+        const notifyButton = document.querySelector('.header__navbar-item--has-notify');
+    const notifyMenu = document.querySelector('.header__notify');
+
+    // Hiển thị menu khi di chuột vào nút thông báo hoặc menu
+    notifyButton.addEventListener('mouseenter', () => {
+        notifyMenu.style.display = 'block';
+    });
+
+    notifyMenu.addEventListener('mouseenter', () => {
+        notifyMenu.style.display = 'block';
+    });
+
+    // Ẩn menu khi chuột ra khỏi nút thông báo và menu
+    notifyButton.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (!notifyMenu.matches(':hover')) {
+                notifyMenu.style.display = 'none';
+            }
+        }, 100); // Đợi 100ms để đảm bảo không ẩn ngay khi chuyển qua menu
+    });
+
+    notifyMenu.addEventListener('mouseleave', () => {
+        notifyMenu.style.display = 'none';
+    });
+    </script>
+    <!--Modal layout-->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!--Register  form-->
+            <!--<div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn">Đăng nhập</span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                        </div>
+                    </div>
+                    <div class="auth-form__aside">
+                        <p class="auth-form__policy-text">
+                            Bằng việc đăng ký, bạn đã đồng ý với chúng tôi về
+                            <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> & 
+                            <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                        </p>                    
+                    </div>
+        
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook">
+                            <i class="auth-form__socials-icon fa-brands fa-facebook" style="color: #74C0FC;"></i>
+                        
+                        </a>
+                        <a href="" class="auth-form__socials--google">
+                            <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                    
+                        </a>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÝ</button> 
+                    </div>    
+                </div>     
+            </div>
+             -->
+            <!-- Login form-->
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn">Đăng ký</span>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                        </div>
+
+                    </div>
+                    <div class="auth-form__aside">
+                        <div class="auth-form__help">
+                            <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                            <span class="auth-form__help-separate"></span>
+            
+                            <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                        </div>
+                        
+                    </div>
+        
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook">
+                            <i class="auth-form__socials-icon fa-brands fa-facebook" style="color: #74C0FC;"></i>
+                        
+                        </a>
+                        <a href="" class="auth-form__socials--google">
+                            <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                    
+                        </a>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÝ</button> 
+                    </div>    
+                </div>     
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
